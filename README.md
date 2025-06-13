@@ -1,5 +1,5 @@
 # Modern Todo List Application
-//2
+
 
 A clean and modern todo list application built with vanilla JavaScript, featuring a dark color scheme and local storage persistence.
 
