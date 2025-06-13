@@ -28,7 +28,8 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  //hello
+  //1
+
   //move the cursor focus on input if "/" key is pressed
   document.addEventListener("keydown", function (e) {
     if (e.key === "/") {
