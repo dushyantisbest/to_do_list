@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", function () {
   let todoInput = document.querySelector(".todo-input");
   let addBtn = document.querySelector(".todo-add-button");
   let todoList = document.querySelector(".todo-list");
+  let clearBtn = this.document.querySelector("#clear");
 
   let tasks = JSON.parse(localStorage.getItem("myTasks")) || [];
 
@@ -27,8 +28,6 @@ window.addEventListener("DOMContentLoaded", function () {
       todoList.appendChild(listItem);
     }
   }
-
-
 
   //move the cursor focus on input if "/" key is pressed
   document.addEventListener("keydown", function (e) {
@@ -112,4 +111,15 @@ window.addEventListener("DOMContentLoaded", function () {
     todoList.appendChild(listItem);
     storeTask();
   }
+
+  //clear the to do list
+  clearBtn.addEventListener("click", function () {
+    tasks = [];
+    localStorage.clear();
+    let allListItems = document.querySelectorAll("li");
+    allListItems.forEach((item) => {
+      item.remove();
+    });
+    clearBtn.style.display = "none";
+  });
 });

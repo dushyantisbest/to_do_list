@@ -7,7 +7,6 @@ body {
   color: #f5f5f5;
 }
 
-
 /* Center  content */
 div {
   max-width: 600px;
@@ -99,4 +98,26 @@ li button:hover {
 .complete {
   text-decoration: line-through;
   opacity: 50%;
+}
+
+#clear {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  margin-top: 20px;
+  margin-left: auto; /* This will push the button to the right */
+  transition: all 0.3s ease;
+}
+
+#clear:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#clear img {
+  width: 23px;
+  height: 23px;
+  object-fit: cover;
 }
