@@ -59,17 +59,15 @@ window.addEventListener("DOMContentLoaded", function () {
       storeTask();
       listItem.remove();
     }
-    // Handle task completion (clicking on the li but not the button)
-    else if (target.tagName === "LI") {
-      //first child : span
-      let spanTag = target.firstChild;
+    // Handle task completion (clicking on span or li)
+    else if (target.tagName === "SPAN" || target.tagName === "LI") {
+      let spanTag = target.tagName === "SPAN" ? target : target.firstChild;
       spanTag.classList.toggle("complete");
       tasks.forEach((element) => {
         if (element.id == spanTag.dataset.id) {
           element.complete = !element.complete;
         }
       });
-
       storeTask();
     }
   });
